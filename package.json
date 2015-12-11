@@ -1,0 +1,40 @@
+{
+  "name": "frontendbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mononoteweb/frontendbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mononoteweb/frontendbox/issues"
+  },
+  "homepage": "https://github.com/mononoteweb/frontendbox#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.1.2",
+    "browser-sync": "^2.10.0",
+    "connect-modrewrite": "^0.8.2",
+    "css-mqpacker": "^4.0.0",
+    "cssnano": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-htmlhint": "^0.3.0",
+    "gulp-if": "^2.0.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp.spritesmith": "^6.0.0",
+    "lodash": "^3.10.1",
+    "merge-stream": "^1.0.0",
+    "sc5-styleguide": "^0.3.41"
+  }
+}

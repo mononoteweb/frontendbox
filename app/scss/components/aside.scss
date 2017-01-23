@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.mlg-aside {
+  margin: calc((50 / $font-size-num) * 1em) auto;
+}
+
+.mlg-aside__inner {
+  @extend %main-inner;
+}
+
+.mlg-profile__owner {
+  width: calc((150 / $font-size-num) * 1em);
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+
+.mlg-profile__overview,
+.mlg-profile__detail {
+  margin-left: calc((170 / $font-size-num) * 1em);
+} 

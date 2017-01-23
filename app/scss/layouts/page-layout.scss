@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.mlg-container {
+  margin-bottom: calc((50 / $font-size-num) * 1em);
+
+  &:first-child {
+    margin-top: calc(-(40 / $font-size-num) * 1em);
+  }
+}
+
+.mlg-container__inner {
+  max-width: $main-width;
+  margin: 0 auto;
+  padding-bottom: calc((80 / $font-size-num) * 1em);
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .23);
+}

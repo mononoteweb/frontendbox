@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.mlg-information {
+  @extend %main-inner;
+}
+
+.mlg-metadata {
+  margin-right: .5em;
+  display: inline-block;
+}
+
+.mlg-metadata__title,
+.mlg-metadata__content {
+  display: inline-block;
+}
+
+.mlg-metadata__title-icon {
+  width: 1em;
+  height: 1em;
+  fill: $font-color;
+  vertical-align: middle;
+}
+
+.mlg-metadata__content {
+  &::after {
+    content: "\2c";
+  }
+
+  &:last-child {
+    &::after {
+      content: normal;
+    }
+  }
+}

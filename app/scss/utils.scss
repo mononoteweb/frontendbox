@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+$main-width: 750px;
+
+$font-size: .875em;
+$font-size-num: 16;
+$line-height: 1.45;
+
+$font-family-primary: -apple-system, BlinkMacSystemFont, '"Helvetica Neue"', '"Yu Gothic"', YuGothic, Verdana, Meiryo, '"M+ 1p"', sans-serif;
+
+$tb-size-num: 768;
+$sp-size-num: 640;
+
+$tb-size: 768px;
+$sp-size: 640px;
+
+%main-inner {
+  max-width: $main-width;
+  padding: 0 calc((22 / $sp-size-num) * 100%);
+  margin: 0 auto;
+}

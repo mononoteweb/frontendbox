@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.mlg-heading {}
+
+.mlg-heading__text,
+.mlg-heading__link {
+  @extend %main-inner;
+  font-size: calc((26 / $font-size-num) * 1rem);
+  padding-top: calc((22 / $font-size-num) * 1rem);
+  padding-bottom: calc((18 / $font-size-num) * 1em);
+  background: $primary-color;
+  display: block;
+  color: #fff;
+}
+
+.mlg-heading__link {
+  text-decoration: none;
+  transition: background-color .15s ease;
+
+  &:hover {
+    background: $secondary-color;
+    color: #fff;
+  }
+}

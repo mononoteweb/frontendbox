@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.mlg-footer {
+  margin-top: calc((30 / $font-size-num) * 1em);
+}
+
+.mlg-footer__inner {
+  @extend %main-inner;
+  text-align: center;
+}
+
+.mlg-pagetop {
+  position: fixed;
+  right: calc((22 / $sp-size-num) * 100%);
+  bottom: calc((20 / $font-size-num) * 1rem);
+}
+
+.mlg-pagetop__icon {
+  fill: $primary-color;
+  height: calc((48 / $font-size-num) * 1rem);
+  width: calc((48 / $font-size-num) * 1rem);
+  opacity: .35;
+  transition: opacity .15s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.mlg-footer__copyright {
+  margin-bottom: calc((30 / $font-size-num) * 1em);
+  @mixin font-size 14;
+}

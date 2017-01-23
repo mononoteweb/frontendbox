@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+
+@define-mixin cf {
+  &::after {
+     clear: both;
+     display: block;
+     content: "";
+  }
+}
+
+@define-mixin font-smoothing $value {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@define-mixin text-size-adjust $value {
+  @if $value == on {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  } @else {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+  }
+}
+
+
+@define-mixin font-size $size {
+  font-size: calc(($size / $font-size-num) * 1rem);
+}
+
+
+@define-mixin animation $animation-name {
+  animation: $animation-name;
+  animation-fill-mode: both;
+}

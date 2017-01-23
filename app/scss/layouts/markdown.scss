@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.mlg-content {
+  @extend %main-inner;
+
+  a {
+    transition: color .15s ease;
+
+    &:link { color: $primary-color; }
+    &:hover { color: $secondary-color; }
+  }
+}
+
+.mlg-container__link {
+  display: block;
+  background: $primary-color;
+  margin: calc((60 / $font-size-num) * 1rem) auto 0;
+  padding: calc((20 / $font-size-num) * 1rem);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  max-width: calc((150 / $font-size-num) + 1rem);
+  transition: background-color .15s ease;
+
+  &:hover {
+    background: $secondary-color;
+    color: #fff;
+  }
+}

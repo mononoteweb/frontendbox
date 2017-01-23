@@ -19,7 +19,7 @@ module.exports = [{
     core: './app/js/core.js'
   },
   output: {
-    path: __dirname + '/themes/simple-monolooog/static/assets/js',
+    path: __dirname + '/public/assets/js',
     filename: '[name].js'
   },
   module: {
@@ -42,7 +42,7 @@ module.exports = [{
     'style': './app/scss/style.scss'
   },
   output: {
-    path: __dirname + '/themes/simple-monolooog/static/assets/css',
+    path: __dirname + '/public/assets/css',
     filename: '[name].css'
   },
   module: {

@@ -1,0 +1,91 @@
+//	JS Hint 2.6.3
+//	http://jshint.com/docs/options/
+
+//	JSLint Error Example
+//	http://jslinterrors.com/
+
+{
+	//	Enforcing options
+//	"bitwise": true,
+//	"camelcase": false,
+//	"curly": true,
+//	"enforceall": ,
+//	"eqeqeq": true,
+//	"es3": true,
+//	"es5": false,
+//	"forin": true,
+//	"freeze": true,
+//	"funcscope"; false,
+//	"futurehostile": ,
+//	"globals": {},
+//	"globalstrict": false,
+//	"immed": false,
+	"indent": 4,
+//	"iterator": false,
+//	"latedef": true,
+//	"maxcomplexity": false,
+//	"maxdepth": false,
+//	"maxerr": 50,
+//	"maxlen": false,
+//	"maxparams": false,
+//	"maxstatements": false,
+//	"newcap": false,
+//	"noarg": true,
+//	"nocomma": true,
+//	"noempty": true,
+//	"nonbsp": true,
+//	"nonew": false,
+//	"notypeof": false,
+	"quotmark": true,				//	true | false | single | double
+	"shadow": true,
+//	"singleGroups": ,
+//	"undef": true,
+//	"unused": true,
+
+	//	Relaxing options
+	"asi": false,
+	"boss": false,
+	"debug": false,
+//	"elision": ,
+	"eqnull": false,
+	"esnext": false,
+	"evil": false,
+	"expr": false,
+	"lastsemic": false,
+	"laxbreak": false,
+	"laxcomma": true,				//	Default value "flase"
+	"loopfunc": false,
+	"moz": false,
+	"multistr": false,
+//	"noyield": ,
+//	"phantom": ,
+	"plusplus": false,
+	"proto": false,
+	"scripturl": false,
+	"strict": false,
+	"sub": false,
+	"supernew": false,
+	"validthis": false,
+//	"withstmt": ,
+
+	//	Environments (Librarie or Framework Options)
+	"browser": false,
+//	"browserify": ,
+	"couch": false,
+	"devel": true,					//	Default value "flase"
+	"dojo": false,
+	"jasmine": false,
+	"jquery": true,					//	Default value "flase"
+	"mocha": false,
+	"mootools": false,
+	"node": false,
+	"nonstandard": false,
+	"prototypejs": false,
+	"qunit": false,
+	"rhino": false,
+	"shelljs": false,
+	"typed": false,
+	"worker": false,
+	"wsh": false,
+	"yui": false
+}

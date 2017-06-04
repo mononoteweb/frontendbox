@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ejs": "ejs-cli -b app/_template/ *.ejs --out docs/_template/",
-    "watch:html": "chokidar app/_template/*.ejs --command 'build:ejs'",
-    "watch:css": "node-sass -o docs/common-kff/css app/common-kff/scss -w",
+    "postcss": "postcss -h",
+    "build:ejs": "ejs-cli -b app/ejs/ *.ejs --out docs/",
+    "watch:css": "postcss docs/assets/css/*.css -d docs/assets/css -u autoprefixer",
+    "watch:js": "webpack --watch",
+    "watch:html": "chokidar app/ejs/*.ejs --command 'build:ejs'",
+    "watch:scss": "node-sass -o docs/assets/css app/scss -w",
     "watch:server": "browser-sync start --config bs-config.js",
     "watch": "npm-run-all -p watch:*"
   },
@@ -22,12 +25,26 @@
   },
   "homepage": "https://github.com/USER_NAME/PROJECT_NAME#readme",
   "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.18.8",
     "browsersync-ssi": "^0.2.4",
     "chokidar-cli": "^1.2.0",
+    "clean-css-cli": "^4.1.3",
+    "css-mqpacker": "^6.0.1",
     "ejs-cli": "^2.0.0",
     "node-sass": "^4.5.2",
     "npm-run-all": "^4.0.2",
+    "postcss-cli": "^4.0.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "webpack": "^2.5.1"
-  }
+  },
+  "browserlist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

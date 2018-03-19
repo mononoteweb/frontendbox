@@ -20,8 +20,8 @@ module.exports = {
         }
     },
     "files": [
-      "docs/common-project/css/*.css",
-      "docs/common-project/js/*.js",
+      "public/common-project/css/*.css",
+      "public/common-project/js/*.js",
       "**/*.html"
     ],
     "watchEvents": [
@@ -31,14 +31,7 @@ module.exports = {
         "ignoreInitial": true
     },
     "server": {
-      "baseDir": "docs",
-      "middleware": [
-        require("browsersync-ssi")({
-          "baseDir": __dirname + '/docs',
-          "ext": '.shtml',
-          "version": '1.4.0'
-        })
-      ]
+      "baseDir": "public"
     },
     "proxy": false,
     "port": 3000,

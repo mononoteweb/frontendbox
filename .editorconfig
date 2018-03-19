@@ -4,32 +4,8 @@
 root = true
 
 #html file Text editor Config.
-[*.html]
-end_of_line = crlf
-indent_style = tab
-tab_width = 4
-trim_trailing_whitespace = true
-insert_final_newline = false
-
-#SCSS file Text editor Config.
-[*.scss]
-end_of_line = crlf
-indent_style = tab
-tab_width = 4
-trim_trailing_whitespace = true
-insert_final_newline = false
-
-#Stylesheet file Text editor Config.
-[*.css]
-end_of_line = crlf
-indent_style = tab
-tab_width = 4
-trim_trailing_whitespace = true
-insert_final_newline = false
-
-# Script file Text editor Config.
-[*.js]
-end_of_line = crlf
+[*.*]
+end_of_line = lf
 indent_style = tab
 tab_width = 4
 trim_trailing_whitespace = true

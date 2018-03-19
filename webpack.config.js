@@ -1,71 +1,30 @@
-'use strict';
+module.exports = {
+	// モード値を production に設定すると最適化された状態で、
+	// development に設定するとソースマップ有効でJSファイルが出力される
+	mode: 'development',
 
-var webpack = require('webpack');
-var path = require('path');
-var precss = require('precss');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-var cssmqpacker = require('css-mqpacker');
-var postcssImport = require('postcss-import');
-var postcssNested = require('postcss-nested');
-var postcssMixins = require('postcss-mixins');
-var postcssSimpleVars = require('postcss-simple-vars');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-var env = process.env.NODE_ENV;
-
-module.exports = [{
-  entry: {
-    core: './app/js/core.js'
-  },
-  output: {
-    path: __dirname + '/public/assets/js',
-    filename: '[name].js'
-  },
-  module: {
-    loaders: [
-      {
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        test: /\.js[x]?$/,
-        query: {
-          presets: ['es2015']
-        }
-      }
-    ]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin()
-  ]
-}, {
-  entry: {
-    'style': './app/scss/style.scss'
-  },
-  output: {
-    path: __dirname + '/public/assets/css',
-    filename: '[name].css'
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!postcss-loader'),
-      }
-    ]
-  },
-  postcss: [
-    postcssImport({
-      addDependencyTo: webpack
-    }),
-    postcssMixins,
-    postcssSimpleVars,
-    postcssNested,
-    autoprefixer({browsers: ['last 2 versions']}),
-    precss,
-    cssmqpacker,
-    cssnano
-  ],
-  plugins: [
-    new ExtractTextPlugin('[name].css')
-  ]
-}]
+	// メインとなるJavaScriptファイル（エントリーポイント）
+	entry: {
+		'main': './src/ts/main.ts'
+	},
+	output: {
+		path: __dirname + '/public/common/js',
+		filename: '[name].bundle.js'
+	},
+	module: {
+		rules: [
+			{
+				// 拡張子 .ts の場合
+				test: /\.ts$/,
+				// TypeScript をコンパイルする
+				use: 'ts-loader'
+			}
+		]
+	},
+	// import 文で .ts ファイルを解決するため
+	resolve: {
+		extensions: [
+			'.ts'
+		]
+	}
+};

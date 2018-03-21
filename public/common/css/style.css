@@ -1,2 +1,7 @@
-body {
-  color: #000; }
+@media (max-width: 568px) {
+  body {
+    color: #fff; } }
+
+@media (max-width: 568px) {
+  p {
+    transform: rotate(45deg); } }

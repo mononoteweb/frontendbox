@@ -78,7 +78,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/ts/main.ts?");
+eval("alert();\nconsole.log('test');\n\n\n//# sourceURL=webpack:///./src/ts/main.ts?");
 
 /***/ })
 

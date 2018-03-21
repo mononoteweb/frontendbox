@@ -49,8 +49,8 @@ rules:
     - 1
     - convention: '^[a-z][-a-z0-9_]*$'
   indentation:
-    - 1
-    - size: 1
+    - 2
+    - size: tab
   leading-zero:
     - 1
     - include: false

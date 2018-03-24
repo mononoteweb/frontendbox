@@ -1,7 +1,7 @@
 {
 	"name": "frontendbox",
 	"version": "1.0.0",
-	"main": "bs-config.js",
+	"main": "src/ts/main.ts",
 	"config": {
 		"scss_dir": "./src/scss"
 	},
@@ -17,7 +17,7 @@
 		"watch:pug": "pug src/pug/ -o public -w",
 		"watch:server": "browser-sync start --config bs-config.js",
 		"watch:script": "webpack -w",
-		"release": "npm-run-all -p release:css release:script",
+		"release": "NODE_ENV=production npm-run-all -p release:css release:script",
 		"release:css": "npm-run-all -p release:css1 release:css2",
 		"release:css1": "mqpacker public/common/css/style.css public/common/css/style.css",
 		"release:css2": "cleancss -o public/common/css/style.css public/common/css/style.css",
@@ -25,14 +25,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://mononoteweb@github.com/mononoteweb/frontendbox.git"
+		"url": ""
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/mononoteweb/frontendbox/issues"
+		"url": ""
 	},
-	"homepage": "https://github.com/mononoteweb/frontendbox#readme",
+	"homepage": "",
 	"description": "",
 	"devDependencies": {
 		"autoprefixer": "^8.1.0",
